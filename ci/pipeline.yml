@@ -12,3 +12,15 @@ jobs:
     trigger: true
   - task: tests
     file: flight-school/build.yml
+  - put: staging-app
+    params:
+      manifest: flight-school/manifest.yml    
+
+- name: staging-app
+  type: cf
+  source:
+    api: https://api.run.pivotal.io
+    username: 3katsu3hiro@gmail.com
+    password: Kyoukaraha_0
+    organization: 3katsu3hiro-org
+    space: development
