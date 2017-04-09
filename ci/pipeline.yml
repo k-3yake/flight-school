@@ -15,7 +15,6 @@ jobs:
   - put: staging-app
     params:
       manifest: flight-school/manifest.yml    
-
 - name: staging-app
   type: cf
   source:
